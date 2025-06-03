@@ -35,7 +35,7 @@ export function Signup() {
           }}
         ></Input>
         <Input
-          placeholder="sami@gmail.com"
+          placeholder="Enter demo g-email johndoe@gmail.com"
           label={"E-mail"}
           onChange={(e) => {
             setUsername(e.target.value);
