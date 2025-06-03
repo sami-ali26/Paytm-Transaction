@@ -13,7 +13,7 @@ export function Signin() {
         <Input placeholder='sami@gmail.com' label={'E-mail'} ></Input>
         <Input placeholder='1#@32&' label={'Password'} ></Input>
         <Button label={"Sign up"}></Button>
-        <BottomWarning label={"Don't have an account?"} pagename={'Signup'} to={"/signup"}></BottomWarning>
+        <BottomWarning label={"Don't have an account?"} pagename={'Signup'} to={"/"}></BottomWarning>
         </div>
     </div>
 }
