@@ -6,6 +6,10 @@ const { hashPassword, comparePassword } = require('../haspassword')
 const JWT_SECRET = require('../config')
 const router = express.Router()
 
+router.get("/", (req, res) => {
+    res.send("✅ Backend is Live!");
+});
+
 router.post('/signup', async (req, res) => {
     console.log(req.body);
 
