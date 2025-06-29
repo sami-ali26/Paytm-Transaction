@@ -1,9 +1,12 @@
 require("dotenv").config();
+
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log("✅ Connected to MongoDB Atlas"))
-    .catch((err) => console.error("❌ DB connection error:", err));
+mongoose.connect(process.env.MONGO_URL, {
+    serverSelectionTimeoutMS: 10000,
+})
+    .then(() => console.log(" Connected to MongoDB Atlas"))
+    .catch((err) => console.error(" DB connection error:", err));
 
 const userSchema = mongoose.Schema({
     firstName: String,
