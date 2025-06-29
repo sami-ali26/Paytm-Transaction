@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const mongoose = require("mongoose");
+require("dns").setDefaultResultOrder("ipv4first");
 
 mongoose.connect(process.env.MONGO_URL, {
     serverSelectionTimeoutMS: 10000,
