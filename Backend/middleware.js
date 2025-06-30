@@ -4,8 +4,6 @@ const jwt = require('jsonwebtoken')
 const authomiddleware = (req, res, next) => {
 
     const authHead = req.headers.authorization
-    console.log(authHead);
-    console.log(req.headers);
 
     if (!authHead || !authHead.startsWith('Bearer ')) {
         return res.json({})

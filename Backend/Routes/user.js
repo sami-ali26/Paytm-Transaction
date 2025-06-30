@@ -11,8 +11,6 @@ router.get("/", (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
-    console.log(req.body);
-
     const userPayload = req.body
     const parsedPayload = userZodSchema.safeParse(userPayload)
     if (!parsedPayload.success) {
@@ -45,11 +43,9 @@ router.post('/signup', async (req, res) => {
         message: 'User is created',
         token,
         balance
-
-
     })
 })
-router.post('/sigin', async (req, res) => {
+router.post('/signin', async (req, res) => {
     const userPayload = req.body
     const parsedData = userSiginSchema.safeParse(userPayload)
     if (!parsedData.success) {
