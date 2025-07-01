@@ -1,15 +1,20 @@
+
 import { Appbar } from "../Components/Appbar";
 import { Balance } from "../Components/balance";
 import { Users } from "../Components/Users";
-import { useLocation } from "react-router-dom";
+
+
+
+
 export function DashBoard() {
-  const location = useLocation();
-  const balance = location.state?.balance;
+
+  
+ 
   return (
-    <div>
+    <div className="h-full overflow-y-auto bg-gradient-to-br from-purple-500 via-blue-600 to-indigo-600">
       <Appbar />
       <div className="m-8">
-        <Balance value={balance} />
+        <Balance value={'10,000'} />
         <Users />
       </div>
     </div>

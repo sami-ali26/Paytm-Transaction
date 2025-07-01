@@ -12,7 +12,7 @@ export function SendMoney() {
   const { userData } = location.state || {};
   const firstName = searchParams.get("username");
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-violet-400 to-slate-50 px-4">
       <div className="bg-white shadow-md rounded-xl p-8 w-full max-w-sm">
         <h2 className="text-xl font-bold text-center mb-6">Send Money</h2>
 
@@ -38,7 +38,7 @@ export function SendMoney() {
         <button
           onClick={async () => {
             const response = await axios.post(
-              "http://localhost:3004/api/v1/account/transfer",
+              `${import.meta.env.VITE_API_URL}/api/v1/account/transfer`,
               {
                 id: id,
                 amount: input,
